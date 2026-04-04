@@ -1,7 +1,7 @@
 import { Plus, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/context/CartContext";
-import type { Product } from "@/data/mockData";
+import { type Product, formatPrice } from "@/data/mockData";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const { items, addToCart, updateQuantity } = useCart();

@@ -33,7 +33,7 @@ const CartDrawer = ({ open, onClose }: CartDrawerProps) => {
             <div className="flex-1 space-y-3 overflow-y-auto pr-1">
               {items.map((item) => (
                 <div key={item.product.id} className="flex items-center gap-3 rounded-lg border bg-card p-3">
-                  <span className="text-3xl">{item.product.image}</span>
+                  <img src={item.product.image} alt={item.product.name} className="h-12 w-12 rounded-md object-contain" />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold truncate text-card-foreground">{item.product.name}</p>
                     <p className="text-sm font-bold text-primary">

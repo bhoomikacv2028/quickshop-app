@@ -5,7 +5,7 @@ import CategoryFilter from "@/components/CategoryFilter";
 import ProductCard from "@/components/ProductCard";
 import CartDrawer from "@/components/CartDrawer";
 import AuthModal from "@/components/AuthModal";
-import { Search } from "lucide-react";
+import { Search, Zap } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 const Index = () => {
@@ -25,34 +25,31 @@ const Index = () => {
       <Navbar onCartOpen={() => setCartOpen(true)} onAuthOpen={() => setAuthOpen(true)} />
 
       {/* Hero */}
-      <section className="hero-gradient py-16 text-primary-foreground">
+      <section className="hero-gradient py-12 text-primary-foreground">
         <div className="container text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Fresh Groceries,<br />Delivered Fast 🚀
+          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-primary-foreground/20 px-3 py-1 text-sm font-medium backdrop-blur-sm">
+            <Zap className="h-3.5 w-3.5" />
+            Delivery in 10–15 minutes
+          </div>
+          <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
+            Groceries delivered<br />to your doorstep ⚡
           </h1>
-          <p className="mx-auto mt-4 max-w-md text-lg opacity-90">
-            Shop farm-fresh produce, dairy, snacks and more — right from your couch.
+          <p className="mx-auto mt-3 max-w-md text-base opacity-90">
+            Atta, dal, sabzi, fruits & more — fresh and fast, right from your neighbourhood store.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
       <main className="container py-8">
-        {/* Search + Filter */}
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <CategoryFilter selected={selectedCategory} onSelect={setSelectedCategory} />
           <div className="relative w-full sm:max-w-xs">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              placeholder="Search products..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="pl-9"
-            />
+            <Input placeholder="Search atta, dal, milk..." value={search} onChange={(e) => setSearch(e.target.value)} className="pl-9" />
           </div>
         </div>
 
-        {/* Product Grid */}
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-muted-foreground">
             <p className="text-lg font-medium">No products found</p>

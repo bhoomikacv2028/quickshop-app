@@ -39,7 +39,7 @@ const Navbar = ({ onCartOpen, onAuthOpen }: NavbarProps) => {
               <Leaf className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold tracking-tight text-foreground">
-              Fresh<span className="text-primary">Cart</span>
+              Groc<span className="text-primary">ify</span>
             </span>
           </div>
 

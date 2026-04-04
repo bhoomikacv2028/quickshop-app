@@ -61,7 +61,7 @@ const CartDrawer = ({ open, onClose }: CartDrawerProps) => {
               <Separator />
               <div className="flex items-center justify-between">
                 <span className="text-lg font-bold text-foreground">Total</span>
-                <span className="text-xl font-bold text-primary">${totalPrice.toFixed(2)}</span>
+                <span className="text-xl font-bold text-primary">{formatPrice(totalPrice)}</span>
               </div>
               <Button className="w-full hero-gradient text-primary-foreground" size="lg">
                 Checkout

@@ -23,7 +23,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         <h3 className="font-semibold text-card-foreground leading-tight">{product.name}</h3>
         <p className="text-xs text-muted-foreground">{product.unit}</p>
         <div className="mt-auto flex items-center justify-between pt-2">
-          <span className="text-lg font-bold text-primary">${product.price.toFixed(2)}</span>
+          <span className="text-lg font-bold text-primary">{formatPrice(product.price)}</span>
           {!product.inStock ? (
             <span className="text-xs font-medium text-destructive">Out of stock</span>
           ) : cartItem ? (

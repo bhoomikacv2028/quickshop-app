@@ -1,6 +1,7 @@
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
+import { formatPrice } from "@/data/mockData";
 import { useCart } from "@/context/CartContext";
 import { Separator } from "@/components/ui/separator";
 
